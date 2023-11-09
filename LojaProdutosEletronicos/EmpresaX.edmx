@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EmpresaXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_Categorias">
+          <Key>
+            <PropertyRef Name="ID_Categoria" />
+          </Key>
+          <Property Name="ID_Categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Categoria" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deleted" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_Estoque">
+          <Key>
+            <PropertyRef Name="ID_Produto" />
+          </Key>
+          <Property Name="ID_Produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomeProduto" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Categoria" Type="int" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="50" />
+          <Property Name="Preco" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fabricante" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataDeFabricacao" Type="nvarchar" MaxLength="50" />
+          <Property Name="Processador" Type="nvarchar" MaxLength="50" />
+          <Property Name="Memoria" Type="nvarchar" MaxLength="50" />
+          <Property Name="Armazenamento" Type="nvarchar" MaxLength="50" />
+          <Property Name="Resolucao" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tensao" Type="nvarchar" MaxLength="50" />
+          <Property Name="Dimensoes" Type="nvarchar" MaxLength="50" />
+          <Property Name="Peso" Type="nvarchar" MaxLength="50" />
+          <Property Name="Imagem" Type="image" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deleted" Type="int" />
+          <Property Name="ID_Modelo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_Funcionarios">
+          <Key>
+            <PropertyRef Name="ID_Funcionario" />
+          </Key>
+          <Property Name="ID_Funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome_Funcionario" Type="nvarchar" MaxLength="50" />
+          <Property Name="Funcao" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Setor" Type="int" />
+          <Property Name="Deleted" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_Produtos">
+          <Key>
+            <PropertyRef Name="ID_Produto" />
+          </Key>
+          <Property Name="ID_Produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Produto" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Categoria" Type="int" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="200" />
+          <Property Name="Deleted" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_Setor">
+          <Key>
+            <PropertyRef Name="ID_Setor" />
+          </Key>
+          <Property Name="ID_Setor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Setor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deleted" Type="int" />
+        </EntityType>
+        <EntityContainer Name="EmpresaXModelStoreContainer">
+          <EntitySet Name="tb_Categorias" EntityType="Self.tb_Categorias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Estoque" EntityType="Self.tb_Estoque" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Funcionarios" EntityType="Self.tb_Funcionarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Produtos" EntityType="Self.tb_Produtos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Setor" EntityType="Self.tb_Setor" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EmpresaXModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_Categorias">
+          <Key>
+            <PropertyRef Name="ID_Categoria" />
+          </Key>
+          <Property Name="ID_Categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tb_Produtos">
+          <Key>
+            <PropertyRef Name="ID_Produto" />
+          </Key>
+          <Property Name="ID_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Produto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Categoria" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="EmpresaXEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_Categorias" EntityType="Self.tb_Categorias" />
+          <EntitySet Name="tb_Produtos" EntityType="Self.tb_Produtos" />
+          <EntitySet Name="tb_Funcionarios" EntityType="EmpresaXModel.tb_Funcionarios" />
+          <EntitySet Name="tb_Setor" EntityType="EmpresaXModel.tb_Setor" />
+          <EntitySet Name="tb_Estoque" EntityType="EmpresaXModel.tb_Estoque" />
+        </EntityContainer>
+        <EntityType Name="tb_Funcionarios">
+          <Key>
+            <PropertyRef Name="ID_Funcionario" />
+          </Key>
+          <Property Name="ID_Funcionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome_Funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Funcao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Setor" Type="Int32" />
+          <Property Name="Deleted" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tb_Setor">
+          <Key>
+            <PropertyRef Name="ID_Setor" />
+          </Key>
+          <Property Name="ID_Setor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Setor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tb_Estoque">
+          <Key>
+            <PropertyRef Name="ID_Produto" />
+          </Key>
+          <Property Name="ID_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeProduto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Categoria" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Preco" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fabricante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataDeFabricacao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Processador" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Memoria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Armazenamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Resolucao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tensao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Dimensoes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Peso" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Imagem" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Int32" />
+          <Property Name="ID_Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EmpresaXModelStoreContainer" CdmEntityContainer="EmpresaXEntities">
+          <EntitySetMapping Name="tb_Categorias">
+            <EntityTypeMapping TypeName="EmpresaXModel.tb_Categorias">
+              <MappingFragment StoreEntitySet="tb_Categorias">
+                <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Produtos">
+            <EntityTypeMapping TypeName="EmpresaXModel.tb_Produtos">
+              <MappingFragment StoreEntitySet="tb_Produtos">
+                <ScalarProperty Name="ID_Produto" ColumnName="ID_Produto" />
+                <ScalarProperty Name="Produto" ColumnName="Produto" />
+                <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Funcionarios">
+            <EntityTypeMapping TypeName="EmpresaXModel.tb_Funcionarios">
+              <MappingFragment StoreEntitySet="tb_Funcionarios">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="ID_Setor" ColumnName="ID_Setor" />
+                <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+                <ScalarProperty Name="Nome_Funcionario" ColumnName="Nome_Funcionario" />
+                <ScalarProperty Name="ID_Funcionario" ColumnName="ID_Funcionario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Setor">
+            <EntityTypeMapping TypeName="EmpresaXModel.tb_Setor">
+              <MappingFragment StoreEntitySet="tb_Setor">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Setor" ColumnName="Setor" />
+                <ScalarProperty Name="ID_Setor" ColumnName="ID_Setor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Estoque">
+            <EntityTypeMapping TypeName="EmpresaXModel.tb_Estoque">
+              <MappingFragment StoreEntitySet="tb_Estoque">
+                <ScalarProperty Name="ID_Modelo" ColumnName="ID_Modelo" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Dimensoes" ColumnName="Dimensoes" />
+                <ScalarProperty Name="Tensao" ColumnName="Tensao" />
+                <ScalarProperty Name="Resolucao" ColumnName="Resolucao" />
+                <ScalarProperty Name="Armazenamento" ColumnName="Armazenamento" />
+                <ScalarProperty Name="Memoria" ColumnName="Memoria" />
+                <ScalarProperty Name="Processador" ColumnName="Processador" />
+                <ScalarProperty Name="DataDeFabricacao" ColumnName="DataDeFabricacao" />
+                <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+                <ScalarProperty Name="Preco" ColumnName="Preco" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+                <ScalarProperty Name="NomeProduto" ColumnName="NomeProduto" />
+                <ScalarProperty Name="ID_Produto" ColumnName="ID_Produto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

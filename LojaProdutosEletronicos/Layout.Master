@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="LojaProdutosEletronicos.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div style="text-align: center">
+                    <asp:LinkButton ID="LnkEmpresaX" runat="server" Font-Underline="false" Font-Bold="true" Font-Size="42px" ForeColor="Black">EMPRESA X</asp:LinkButton>
+                </div>
+                <br />
+                <nav id="Menu">
+                    <asp:LinkButton ID="LnkHome" runat="server" Font-Underline="false" ForeColor="Black" PostBackUrl="~/HomePage.aspx">INÍCIO</asp:LinkButton>&nbsp
+                    <asp:LinkButton ID="LnkProdutos" runat="server" Font-Underline="false" ForeColor="Black" PostBackUrl="~/PagProdutos.aspx">PRODUTOS</asp:LinkButton>&nbsp
+                    <asp:LinkButton ID="LnkCategorias" runat="server" Font-Underline="false" ForeColor="Black" PostBackUrl="~/PagCategorias.aspx">CATEGORIAS</asp:LinkButton>&nbsp
+                    <asp:LinkButton ID="LnkCadastroFuncionarios" runat="server" Font-Underline="false" ForeColor="Black" PostBackUrl="~/PagFuncionarios.aspx">FUNCIONÁRIOS</asp:LinkButton>&nbsp
+                    <asp:LinkButton ID="LnkEstoque" runat="server" Font-Underline="false" ForeColor="Black" PostBackUrl="~/PagEstoque.aspx">ESTOQUE</asp:LinkButton>
+                </nav>
+            </header>
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            <footer>
+                <asp:Table ID="tbFooter" runat="server">
+                    <asp:TableRow>
+                        <asp:TableCell>
+                            <asp:Label ID="lbTelefoneContato" runat="server" Text="Contato: (00) 0000-0000" Font-Bold="true"></asp:Label><br />
+                        </asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell>
+                            <asp:Label ID="LbEndereço" runat="server" Text="Rua das Avenidas, 123" Font-Bold="true"></asp:Label>
+                        </asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
