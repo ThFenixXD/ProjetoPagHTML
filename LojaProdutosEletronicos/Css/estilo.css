@@ -63,7 +63,7 @@ nav a {
 }
 
 .wrapperContainer-header {
-    position: fixed;
+    position: sticky;
     width: 100%;
     padding-bottom: 1rem;
 }
@@ -91,7 +91,7 @@ nav a {
 }
 
 .header_nav a{
-    padding: .75em 1.15rem;;
+    padding: .75em 1.15rem;
     border: solid 1px;
     text-decoration: none;
 }
@@ -101,8 +101,6 @@ nav a {
     grid-gap: .6rem;
     list-style-type: none;
 }
-
-nav a{red}
 
 .wrapperContainer-hero {
     background-image: linear-gradient(transparent, yellow );
@@ -114,7 +112,6 @@ nav a{red}
     justify-content: space-between;
     align-items: center;
     grid-gap: 20rem;
-    margin-top: 12rem;
 }
 
 .hero_title {
