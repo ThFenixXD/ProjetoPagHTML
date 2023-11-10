@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Formulario</title>
+    <style>
+        body {
+            padding-bottom: 100vh;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Introdução</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <br /><br />
+
+            <label for="filhos">Quantidade de dependentes</label><br />
+
+            <input type="number" id="filhos"
+                   min="0" />
+            <br /><br /><br />
+
+            <input type="date" min="2022-01-15" />
+
+            <!--<br /><br />
+            Possui atividade extra?
+            <input type="radio" name="atvExtra" id="radioSim" />
+            <label for="radioSim">Sim</label>
+            <input type="radio" name="atvExtra" id="radioNao" />
+            <label for="radioNao">Não</label>
+            <br /><br />-->
+            Possui atividade extra?
+            <label>
+                <input type="radio" name="atvExtra" value="s" />Sim
+            </label>
+            <label>
+                <input type="radio" name="atvExtra" value="n" />Não
+            </label>
+            <br /><br />
+            <input type="submit" value="Mandar" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de Interesse</legend>
+
+            <label>
+                <input type="checkbox"
+                       name="interesse" value="html" />HTML
+            </label>
+            <label>
+                <input type="checkbox"
+                       name="interesse" value="css" />CSS
+            </label>
+            <label>
+                <input type="checkbox"
+                       name="interesse" value="javascript" />Javascript
+            </label>
+            <label>
+                <input type="checkbox"
+                       name="interesse" value="Python" />Python
+            </label>
+            <label>
+                <input type="checkbox"
+                       name="interesse" value="Java" />Java
+            </label>
+            <br /><br />
+            <label>
+                Escolha uma linguagem
+
+                <select name="linguagem" required multiple size="9">
+
+                    <optgroup label="Front-end">
+                        <option value="">Selecione</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">Javascript</option>
+                    </optgroup>
+                    <optgroup label="Back-end">
+                        <option value="">Selecione</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </optgroup>
+                </select>
+
+                <input type="text" list="linguagemList" />
+                <datalist id="linguagemList">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="Javascript">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="PHP">
+                </datalist>
+            </label>
+        </fieldset>
+
+        <br /><br /><br />
+        <input type="submit" value="mandar" />
+
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="msg" cols="30" rows="5" maxlength="255"></textarea>
+            <br /><br />
+            <textarea cols="30" rows="5" readonly>
+CONTRATO DE UTILIZAÇÂO
+1.1 REGRA 1
+
+1.2 REGRA 2
+</textarea>
+            <label>
+                <input type="checkbox" />Li e aceito o contrato
+            </label>
+            <br /><br />
+            <input type="file" value="mandar" />
+            <input type="button" value="button" />
+
+            <button>mandar com tag button</button>
+
+            <input type="search" /><br /><br />
+
+            <input type="range" min="0" max="10" step="2" /><br /><br />
+
+            <input type="time" step="5"/><br /><br />
+
+            <input type="color" /><br /><br />
+
+        </fieldset>
+
+
+
+    </form>
+</body>
+</html>

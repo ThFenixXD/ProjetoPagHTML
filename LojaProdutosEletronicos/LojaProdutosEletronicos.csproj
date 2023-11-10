@@ -80,7 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Desktop.png" />
+    <Content Include="Css\Contato.css" />
     <Content Include="Css\estilo.css" />
+    <Content Include="Css\estiloLogin.css" />
+    <Content Include="Css\FormularioAzul.css" />
     <Content Include="Css\normalize.css" />
     <Content Include="Css\reset.css" />
     <Content Include="EmpresaX.Context.tt">
@@ -95,7 +98,19 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Html\Contato.html" />
+    <Content Include="Html\Details.html" />
+    <Content Include="Html\Forms.html" />
+    <Content Include="Html\FormularioAzul.html" />
+    <Content Include="Html\FormularioDeContato.html">
+      <BrowseToURL>~/Html/Contato.html</BrowseToURL>
+    </Content>
+    <Content Include="Html\Formularios.html" />
     <Content Include="Html\Index.html" />
+    <Content Include="Html\listasAninhadas.html" />
+    <Content Include="Html\Login.html" />
+    <Content Include="Html\Meter_Progress.html" />
+    <Content Include="Html\TesteTabela.html" />
     <Content Include="Imagens\curso-design-1.png" />
     <Content Include="Imagens\curso-design-2.png" />
     <Content Include="Imagens\curso-design.png" />
@@ -110,6 +125,7 @@
     <Content Include="PagLogin.aspx" />
     <Content Include="PagProdutos.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmpresaX.Context.cs">
@@ -195,6 +211,13 @@
     <Compile Include="tb_Setor.cs">
       <DependentUpon>EmpresaX.tt</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Útil\Framework.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +229,7 @@
       <DependentUpon>EmpresaX.edmx</DependentUpon>
     </Content>
     <Content Include="Layout.Master" />
+    <Content Include="Css\Contato.less" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

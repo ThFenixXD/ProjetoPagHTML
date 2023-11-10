@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Meter & Progress</title>
+</head>
+<body>
+    <h1>Meter</h1>
+
+    <meter min="0" max="100" low="30" high="90" optimum="50" value="50"></meter>
+
+    <h1>Progress</h1>
+    <label>% Concluído
+        <progress max="100" value="50">50%</progress>
+    </label>
+
+    <form oninput="result.value = a.value * b.value">
+        <input type="number" name="a" id="a" /> X
+        <input type="number" name="b" id="b" /> =
+        <output name="result" for="a b"></output>
+
+    </form>
+</body>
+</html>
