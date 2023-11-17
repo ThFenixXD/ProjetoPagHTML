@@ -1,0 +1,30 @@
+﻿article {
+    outline: 4px solid green;
+}
+
+article a {
+    color: red;
+}
+
+/* FILHO DIRETO DE a*/
+article a > b {
+    color: green;
+}
+
+/* Imediatamente após h3*/
+h3 + p {
+    background-color: yellow;
+}
+
+/* Todos após hr*/
+hr ~ p {
+    border: 4px dashed orange;
+}
+
+.destaque {
+    padding-left: 2rem;
+}
+
+p:not(.destaque){
+    background-color: #aeadad;
+}

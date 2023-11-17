@@ -1,6 +1,6 @@
 ﻿html{
-    background-color: #235bb4;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    background-color: #3a68b7;
+    font-family: Roboto, Arial, sans-serif;
 }
 
 body{
@@ -11,24 +11,25 @@ body{
     margin: 0;
 }
 
-.formulario{
+.formulario {
     background-color: white;
     width: 20%;
     min-width: 350px;
     min-height: 280px;
     padding: 1em;
+    box-shadow: rgba(0,0,0,.2) 4px 4px inset;
 }
 
-fieldset{
-    border:none;
+fieldset {
+    border: none;
+    
 }
 
 legend {
     margin: .5em 0;
     padding: 0;
     font-size: 1.5em;
-    color: #235bb4;
-    
+    color: #3a68b7;
 }
 
 .lb, inputInfo {
@@ -37,6 +38,7 @@ legend {
 
 .lb{
     text-transform: uppercase;
+    font-weight: 300;
     font-size: .75em;
     
 }
@@ -45,7 +47,7 @@ legend {
     margin: 1em 0;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #235bb4;
+    border-bottom: 1px solid #3a68b7;
 }
 
 .botoesCadastro {
@@ -57,7 +59,7 @@ legend {
 
 .btn {
     padding: .6em .5em;
-    background-color: #235bb4;
+    background-color: #3a68b7;
     font-weight: 600;
     color: white;
     text-transform: uppercase;
@@ -65,18 +67,8 @@ legend {
 }
 
 .lnkLoginCadastro {
-    font-size: smaller;
+    font-size: xx-small;
+    font-weight: 600;
 }
 
-.inputInfo:focus {
-    border: 2px solid #235bb4;
-    
-}
 
-.inputInfo:invalid:focus{
-    
-}
-
-.inputInfo:valid:focus {
-    
-}

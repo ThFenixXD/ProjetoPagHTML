@@ -1,0 +1,33 @@
+﻿p:first-child{
+    color: red;
+}
+
+p:last-child{
+    color: orange;
+}
+
+p:nth-child(3){
+    background-color: aquamarine;
+}
+
+p:first-of-type{
+    background-color: green;
+}
+
+p:last-of-type{
+    background-color: red;
+}
+
+p:nth-of-type(2){
+    text-decoration: underline;
+}
+
+/*li:nth-child(odd){
+    color:blue;
+}*/
+
+li:nth-child(3n+1) {
+    color: orange;
+}
+
+

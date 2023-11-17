@@ -85,7 +85,9 @@
     <Content Include="Css\estiloLogin.css" />
     <Content Include="Css\FormularioAzul.css" />
     <Content Include="Css\normalize.css" />
+    <Content Include="Css\pseudo-classes-child.css" />
     <Content Include="Css\reset.css" />
+    <Content Include="Css\SeletoresAtributos.css" />
     <Content Include="EmpresaX.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EmpresaX.Context.cs</LastGenOutput>
@@ -110,6 +112,8 @@
     <Content Include="Html\listasAninhadas.html" />
     <Content Include="Html\Login.html" />
     <Content Include="Html\Meter_Progress.html" />
+    <Content Include="Html\pseudo-classes-child.html" />
+    <Content Include="Html\SeletoresAtributos.html" />
     <Content Include="Html\TesteTabela.html" />
     <Content Include="Imagens\curso-design-1.png" />
     <Content Include="Imagens\curso-design-2.png" />
